@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/de9f2e76d7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>les petits plats</title>
+</head>
+<body>
+    <header class="logo">
+        <img src="images/logo.png" alt="logo les petits plats"  width="268" height="93">
+    </header>
+
+    <main></main>
+    <section>
+        <h6>.</h6>
+        <div class="search_bar">
+            <input type="search" placeholder="Rechercher un ingrédient,appareil,ustensiles ou une recette" />
+            <div class="icone_searchbar">
+                <i class="fas fa-search loop"></i>
+            </div>
+        </div>
+        <div class="allTag">
+            <div class="tagIngredient">
+                <!-- <div class="closeLogoTag"></div> -->
+            </div>
+            <div class="tagAppliance">
+                <!-- <div class="closeLogoTag"></div> -->
+            </div>
+            <div>
+                <div class="tagUstensile">
+                    <!-- <div class="closeLogoTag"></div> -->
+                </div>
+            </div>
+            <div class="search_global">
+                <div class="searchIngredients">
+                    <input class="target_ing" placeholder="Ingrédients" />
+                    <div class="container_ingredients">
+                        <input class="inp_ing" placeholder="Rechercher un ingrédient" />
+                        <img class="arrowUp3" src="./images/arrowUp.svg" alt="" />
+                        <div class="liste_total_ingredients">
+                            <ul class="liste_ingredients" id="liste_ingredients">
+                                //<li><a class="details_list_choice details_list_choice--ingredients" id="XXX" role="option"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchAppareil">
+                    <input class="target_app" placeholder="Appareil" />
+                    <div class="container_appliances">
+                        <input class="inp_apr" placeholder="Rechercher un appareil" />
+                        <img class="arrowUp3" src="./images/arrowUp.svg" alt="" />
+                        <div class="liste_total_appareils">
+                            <ul class="liste_appareils" id="liste_appareils"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="searchUstensiles">
+                    <input class="target_ust" placeholder="Ustensiles" />
+                    <div class="container_ustensiles">
+                        <input class="inp_ust" placeholder="Rechercher un ustensile" />
+                        <img class="arrowUp3" src="./images/arrowUp.svg" alt="" />
+                        <div class="liste_total_ustensiles">
+                            <ul class="liste_ustensiles" id="liste_ustensiles"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<section class="flex_description" id="recettes-section">
+    <h6>.</h6>
+    <!-- STRUCTURE DE REFERENCE -->
+    
+    <!-- <article class="bloc_recette">
+        <div class="image"></div>
+        <div class="recette_text">
+            <div class="recette_general">
+                <h1 class="recette_title">Limonade de coco</h1>
+                <div class="recette_time">
+                    <i class="recette_time_icon far fa-clock"></i>
+                    <h1 class="recette_time_text">10 min</h1>
+                </div>
+            </div>
+            <div class="recette_details">
+                <ul class="recette_ingredients">
+                    <li class="recette_ingredients_element">
+                        <b>Lait de coco</b>
+                        : 400 ml
+                    </li>
+                    <li class="recette_ingredients_element">
+                        <b>Jus de citron</b>
+                    </li>
+                    <li class="recette_ingredients_element">
+                        <b>Crème de coco</b>
+                        : 2 cuillères à soupe
+                    </li>
+                    <li class="recette_ingredients_element">
+                        <b>Sucre</b>
+                        : 30 grammes
+                    </li>
+                </ul>
+                <p class="recette_steps">Découper le thon en dés, mettre dans un
+                     plat et recouvrir de jus de citron vert (mieux vaut prendre un
+                      plat large et peu profond). Laisser reposer au réfrigérateur 
+                      au moins 2 heures (si possible faites-le le soir pour le lendemain). Après avoir laissé mariner le poisson, couper le concombre en fines rondelles sans la peau et les tomates en prenant soin de retirer les pépins. Rayer la carotte. Ajouter les légumes au poisson avec le citron cette fois-ci dans un saladier. Ajouter le lait de coco. Pour ajouter un peu plus de saveur, vous pouvez ajouter 1 à 2 cuillères à soupe de crème de coco.</p>
+            </div>
+        </div>
+    </article> -->
+
+    
+    
+</section>
+
+</main>
+   <script type ="module" src="constructors/classrecipe.js"></script> 
+   <script type="module"src="index.js"></script>
+</body>
+</html>
