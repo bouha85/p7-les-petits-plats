@@ -47,60 +47,51 @@ export class Recipe {
         recipesList.innerHTML += recipes;
     }
 
-    get createIngredients() {
-        //<li><a class="details_list_choice details_list_choice--ingredients" id="XXX" role="option"></a></li>
-        const recipeIngredients = [];
-        // const ingredientsList = document.getElementById('liste_ingredients')
-        for (let i = 0; i < this._ingredients.length; i++) {
+    static createIngredientsList(ingredients) {
+        const ingredientsList = document.getElementById('liste_ingredients')
+        for (const ingredient of ingredients) {
             const recipeIngredient = document.createElement("li");
             recipeIngredient.classList.add("details_list_element", "details_list_element--ingredients");
-            recipeIngredient.setAttribute("id", `${this._ingredients[i].ingredient}`);
-            recipeIngredients.push(recipeIngredient);
+            recipeIngredient.setAttribute("id", `${ingredient}`);
             const recipeIngredientLink = document.createElement("a");
             recipeIngredientLink.classList.add("details_list_choice", "details_list_choice--ingredients");
             recipeIngredientLink.setAttribute("role", "option");
-            recipeIngredientLink.innerHTML = `${this._ingredients[i].ingredient}`;
+            recipeIngredientLink.innerHTML = ingredient;
             recipeIngredient.appendChild(recipeIngredientLink);
+            ingredientsList.appendChild(recipeIngredient)
         }
-
-        return recipeIngredients;
     }
-
-    get createApparel()
-    {
+    static createApplianceList(appliance) {
         //<li><a class="details_list_choice details_list_choice--apparels" id="XXX" role="option"></a></li>
-
+        const appliancelist = document.getElementById('liste_appareils')
         const recipeApparel = document.createElement("li");
         recipeApparel.classList.add("details_list_element", "details_list_element--apparels");
         recipeApparel.setAttribute("id", `${this._appliance}`);
         const recipeApparelLink = document.createElement("a");
         recipeApparelLink.classList.add("details_list_choice", "details_list_choice--apparels");
         recipeApparelLink.setAttribute("role", "option");
-        recipeApparelLink.innerHTML = `${this._appliance}`;
+        recipeApparelLink.innerHTML = appliance;
         recipeApparel.appendChild(recipeApparelLink);
-
-        return recipeApparel
+        appliancelist.appendChild(recipeApparel);
+        
     }
 
-    get createUstensils()
-    {
-        //<li><a class="details_list_choice details_list_choice--utensils" id="XXX" role="option"></a></li>
-
-        const recipeUstensils = [];
-
-        for (let i = 0; i < this._ustensils.length; i++) {
+    static createUstensilsList(ustensils) {
+        const ustensilsList = document.getElementById('liste_ustensiles');
+        for (const ustensil of ustensils) {
             const recipeUstensil = document.createElement("li");
-            recipeUstensil.classList.add("details_list_element", "details_list_element--utensils");
-            recipeUstensil.setAttribute("id", `${this._ustensils[i]}`);
-            recipeUstensils.push(recipeUstensil);
+            recipeUstensil.classList.add("details_list_element", "details_list_element--ustensils");
+            recipeUstensil.setAttribute("id", `${ustensils}`);
             const recipeUstensilLink = document.createElement("a");
-            recipeUstensilLink.classList.add("details_list_choice", "details_list_choice--utensils");
+            recipeUstensilLink.classList.add("details_list_choice", "details_list_choice--ustensils");
             recipeUstensilLink.setAttribute("role", "option");
-            recipeUstensilLink.innerHTML = `${this._ustensils[i]}`;
+            recipeUstensilLink.innerHTML = ustensil;
             recipeUstensil.appendChild(recipeUstensilLink);
+            ustensilsList.appendChild(recipeUstensil)
         }
-
-        return recipeUstensils
     }
+
+    
 
 }
+
