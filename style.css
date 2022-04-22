@@ -123,6 +123,11 @@ body {
 
 /* Organisation & Rangement liste Ingrédients / Appareil / Ustensile */
 
+
+.details[open] {
+    min-width: 300px;
+    max-width: 600px;
+}
 .liste_ingredients,.liste_ustensiles {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -309,19 +314,19 @@ body {
 
 /* Background Tags Ingrédients */
 
-.tagButtonIngredient{
+.tag--ingredient{
     background: #3282f7;
 }
 
 /* Background Tag Appareil */
 
-.tagButtonAppliance{
+.tag--appliance{
     background: #68d9a4;
 }
 
 /* Background Tag Ustensile */
 
-.tagButtonUstensile{
+.tag--ustensile{
     background: #ed6454;
 }
 
@@ -330,6 +335,9 @@ body {
 .crossIcon{
     margin-left: 7px;
     margin-top: 2px;
+}
+.tag_name {
+    font-size: 14px;
 }
 
 
