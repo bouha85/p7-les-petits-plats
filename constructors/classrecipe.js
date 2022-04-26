@@ -48,6 +48,7 @@ export class Recipe {
     }
 
     static createIngredientsList(ingredients) {
+        const tagItems = document.getElementById('tag-items')
         const ingredientsList = document.getElementById('liste_ingredients')
         for (const ingredient of ingredients) {
             const recipeIngredient = document.createElement("li");
@@ -59,6 +60,20 @@ export class Recipe {
             recipeIngredientLink.innerHTML = ingredient;
             recipeIngredient.appendChild(recipeIngredientLink);
             ingredientsList.appendChild(recipeIngredient)
+
+            document.getElementById(ingredient).addEventListener('click', function(){
+                tagItems.innerHTML += `
+                <li class="ingredient">
+                    <p class="tag_name">${ingredient}</p>
+                    <a href="javascript:"><i class="tag_icon far fa-times-circle" id="remove-${ingredient}"></i></a>
+                </li>`
+            })
+            document.addEventListener('click', function(event){
+                if (event.target.id === `remove-${ingredient}`) {
+                    // Faire l'action pour supprimer l'ingrédient de la liste des tags
+                     
+            }
+            })
         }
     }
     static createApplianceList(appliances) {
@@ -74,6 +89,21 @@ export class Recipe {
         recipeApparelLink.innerHTML = appliance;
         recipeApparel.appendChild(recipeApparelLink);
         appliancelist.appendChild(recipeApparel);
+
+        document.getElementById(appliance).addEventListener('click', function() {
+            tagItems.innerHTML += `
+             <li class="appareil">
+                <p class="tag_name">${appliance}</p>
+                <a href=""><i class="tag_icon far fa-times-circle " id="remove-${appliance} "></i></a>
+            </li>
+          `
+        })
+        document.addEventListener('click', function(event){
+            if (event.target.id === `remove-${appliance}`) {
+                // Faire l'action pour supprimer l'ingrédient de la liste des tags
+                 
+        }
+        })
         }
         
         
@@ -91,6 +121,21 @@ export class Recipe {
             recipeUstensilLink.innerHTML = ustensil;
             recipeUstensil.appendChild(recipeUstensilLink);
             ustensilsList.appendChild(recipeUstensil)
+
+            document.getElementById(ustensil).addEventListener('click', function() {
+                tagItems.innerHTML += `
+                 <li class="ustensile">
+                    <p class="tag_name">${ustensil}</p>
+                    <a href=""><i class="tag_icon far fa-times-circle " id="remove-${ustensil}"></i></a>
+                </li>
+              `
+            })
+            document.addEventListener('click', function(event){
+                if (event.target.id === `remove-${ingredient}`) {
+                    // Faire l'action pour supprimer l'ingrédient de la liste des tags
+                     
+            }
+            })
         }
     }
 

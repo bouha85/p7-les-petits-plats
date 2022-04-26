@@ -61,6 +61,8 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 20px;
+  margin-left: 16px
 }
 
 .tag {
@@ -72,11 +74,32 @@ body {
     color: #FFFFFF;
     border-radius: 5px;
     margin-right: 15px;
-    margin-bottom: 15px;
-    padding-left: 18px;
     padding-right: 18px;
   }
 
+  .tag li {
+    list-style: none;
+    display: flex;
+    display: flex;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.tag li.ingredient {
+    background: #3382f7;
+}
+.tag li.appareil {
+    background: #67d9a4;
+}
+
+.tag li.ustensile {
+    background: #ee6354;
+}
+
+.tag li a {
+    color: white;
+}
   .tag_name {
     margin-right: 8px;
     padding-bottom: 2px;
@@ -90,7 +113,7 @@ body {
     justify-content: flex-start;
     flex-wrap: wrap;
     margin-left: 114px;
-    margin-top: 40px;
+    margin-top: 20px;
     position: absolute;
     top: 290px;
 }
@@ -302,7 +325,7 @@ body {
 }
 /* Positionnement et modification des différents Tags */
 
-.tagButton{
+/* .tagButton{
     display: flex;
     border-radius: 5px;
     height: 30px;
@@ -310,35 +333,35 @@ body {
     line-height: 25px;
     padding: 2px 10px;
     margin-left: 20px;
-}
+} */
 
 /* Background Tags Ingrédients */
 
-.tag--ingredient{
-    background: #3282f7;
+/* .tag--ingredient{
+    background-color: #3282f7;
 }
 
 /* Background Tag Appareil */
 
-.tag--appliance{
+/* .tag--appliance{
     background: #68d9a4;
-}
+} */
 
 /* Background Tag Ustensile */
 
-.tag--ustensile{
+/* .tag--ustensile{
     background: #ed6454;
-}
+} */ 
 
 /* Positionnement Icone fermeture Tags */
 
-.crossIcon{
+/* .crossIcon{
     margin-left: 7px;
     margin-top: 2px;
 }
 .tag_name {
     font-size: 14px;
-}
+} */
 
 
 
@@ -348,7 +371,7 @@ body {
 .flex_description {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 10rem;
+    margin-top: 6rem;
     flex-direction: row;
     align-items: stretch;
     justify-content: space-around;
